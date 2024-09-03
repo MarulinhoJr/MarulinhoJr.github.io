@@ -73,6 +73,25 @@ function changeBackground() {
     }, 3000); 
 }
 
+function changeBackground() {
+    var body = document.body;
+    var audio = document.getElementById("buttonSound");
+    var bgImageDiv = document.getElementById("backgroundImage");
+
+    audio.play();
+
+    bgImageDiv.style.backgroundImage = "url('notastda.webp')";
+    bgImageDiv.style.backgroundSize = "100% 100%";  
+    bgImageDiv.style.backgroundPosition = "center";  
+    bgImageDiv.style.backgroundRepeat = "no-repeat";  
+    bgImageDiv.style.opacity = 1;
+
+ 
+    setTimeout(function() {
+        bgImageDiv.style.opacity = 0;
+    }, 3000);  
+}
+
 function pedir_amor() {
     var body = document.body;
     var audio = document.getElementById("Kawai");
@@ -83,14 +102,22 @@ function pedir_amor() {
 
     bgImageDiv.style.backgroundImage = "url('Maxiuwu.png')";
     bgImageDiv.style.backgroundSize = "100% 100%"; 
-    bgImageDiv.style.backgroundPosition = "center";  
-    bgImageDiv.style.backgroundRepeat = "no-repeat";  
+    bgImageDiv.style.backgroundPosition = "center";
+    bgImageDiv.style.backgroundRepeat = "no-repeat"; 
     bgImageDiv.style.opacity = 1;
+
 
     setTimeout(function() {
         bgImageDiv.style.opacity = 0;
     }, 15000); 
+
+
+    setTimeout(function() {
+        audio.pause();
+        audio.currentTime = 0;
+    }, 16000); 
 }
+
 
     </script>
 </body>
